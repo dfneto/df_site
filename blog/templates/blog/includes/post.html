@@ -2,11 +2,11 @@
 
 <li>
     <article class="post">
-        <a href="{% url "post-detail-page" "the-mountains" %}"> <!-- slug="the-mountains" -->
-            <img src="{% static "blog/images/mountains.jpg" %}" alt="Petanca game" />
+        <a href="{% url "post-detail-page" post.slug %}"> <!-- slug="the-mountains" -->
+            <img src="{% static "blog/images/"|add:post.image %}" alt="{{post.title}}" />
             <div class="post__content">
-                <h3>Petanca game</h3>
-                <p>Es muy divertido jugar con los amigos</p>
+                <h3>{{post.title}}</h3> <!-- assim que acessamos dictionary keys in templates ao invés de post['title'] -->
+                <p>{{post.excerpt}}</p>
             </div>
         </a>
     </article>
