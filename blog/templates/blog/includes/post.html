@@ -1,0 +1,13 @@
+{% load static %}
+
+<li>
+    <article class="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/mountains.jpg" %}" alt="Petanca game" />
+            <div class="post__content">
+                <h3>Petanca game</h3>
+                <p>Es muy divertido jugar con los amigos</p>
+            </div>
+        </a>
+    </article>
+</li>
